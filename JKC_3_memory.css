@@ -1,0 +1,404 @@
+/* 모든 페이지 공통 */
+body {
+  font-family: "NanumSquare", bold;
+  margin: 0 auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.gdcontainer {
+  /* 중앙 정렬 */
+  /* 컨테이너를 부모로 만듦 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: auto;
+  margin: 100px auto 0;
+  /* 가로로 정렬하다가 넓이를 침범하면 다음 줄에서 정렬됨 좌->우 */
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* 네비게이션 뒤로 와야하기 때문에 z-index를 낮은값을줌 */
+  z-index: 1;
+}
+.newsbox {
+  z-index: 9999;
+
+  font-size: 30px;
+  padding-left: 300px;
+  border-bottom: rgb(97, 21, 121) solid 2px;
+}
+.newsbox-title {
+  font-size: 60px;
+  font-weight: bold;
+}
+#wrapper {
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 100px;
+}
+.news-wrapper {
+  height: auto;
+  min-height: 100%;
+  margin-top: 200px;
+  padding-bottom: 200px;
+}
+
+.flip-box {
+  width: 250px;
+  height: 400px;
+  float: left; /* box의 시작. 좌로정렬 */
+  margin: 60px;
+  /* perspective는 3D를 위한 속성임(원근감 조절해서 맞추기) */
+  perspective: 1000px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/* 뒤집히면 나오는 부분 */
+/* 3D효과 사용시 transform-style을 preserve-3d로 지정해야 사용가능 */
+/* 애니메이션 효과를 위해 transform:rotateY(0deg)로 미리 지정 */
+.flip,
+.flip2,
+.flip3,
+.flip4,
+.flip5,
+.flip6,
+.flip7 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  line-height: 400px;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  /* 카드가 뒤집히는 시간 */
+  transition: 1.5s;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* 히든으로 지정해야 뒷면이 안보임 */
+  backface-visibility: hidden;
+  border-radius: 20px 20px 20px 20px;
+  z-index: 5;
+}
+
+.back {
+  background: rgb(38, 111, 221);
+  transform: rotateY(180deg);
+  z-index: 5;
+}
+
+.printBOX {
+  z-index: 9999;
+  font-size: 50px;
+  margin: 200px;
+  opacity: 0.1;
+}
+
+/* 호버시 돌려주기 */
+.flip-box:hover .flip {
+  transform: rotateY(180deg);
+}
+
+.flip-box:hover .flip2 {
+  transform: rotateY(180deg);
+}
+
+.flip-box:hover .flip3 {
+  transform: rotateY(180deg);
+}
+
+.flip-box:hover .flip4 {
+  transform: rotateY(180deg);
+}
+
+.flip-box:hover .flip5 {
+  transform: rotateY(180deg);
+}
+
+.flip-box:hover .flip6 {
+  transform: rotateY(180deg);
+}
+.flip-box:hover .flip7 {
+  transform: rotateY(180deg);
+}
+
+.flip_img {
+  border-radius: 20px 20px 20px 20px;
+  width: 300px;
+  height: 400px;
+}
+
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* li {
+  list-style: none;
+} */
+
+body {
+  font-family: "NanumSquare", bold;
+  margin: 0 auto;
+}
+
+.flip_a {
+  text-decoration: none;
+  color: cornsilk;
+}
+
+/*페이지1 */
+#section1 {
+  background-color: lightblue;
+}
+
+/*페이지2 */
+#section2 {
+  background-color: lightgreen;
+}
+
+/*페이지3 */
+#section3 {
+  background-color: lightpink;
+}
+
+/*페이지4 */
+#section4 {
+  background-color: rgb(45, 251, 22);
+}
+
+/*페이지5 */
+#section5 {
+  background-color: rgb(207, 243, 24);
+}
+
+/*페이지6 */
+#section6 {
+  background-color: rgb(29, 248, 233);
+}
+
+/*페이지7 */
+#section7 {
+  background-color: rgb(213, 36, 192);
+}
+
+/* 여기서부터 도형회전 */
+
+.containert {
+  position: relative;
+  top: 20%;
+  left: 33%;
+  /* transform: translate(-50%, -50%) scale(0.8); */
+  width: 200px;
+  height: 200px;
+  transform-origin: center;
+  animation: spin 10s linear infinite;
+  scale: 0.5;
+  opacity: 0.2;
+}
+
+.containert1 {
+  position: relative;
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%);  */
+  width: 200px;
+  height: 200px;
+  transform-origin: center;
+  animation: spin 10s linear infinite;
+  scale: 0.1;
+  opacity: 0.2;
+}
+
+.containert2 {
+  position: relative;
+  top: -31%;
+  left: 12%;
+  transform: translate(-50%, -50%) scale(0.8);
+  /* width: 200px; */
+  height: 200px;
+  transform-origin: center;
+  animation: spin 4s linear infinite;
+  scale: 0.2;
+  opacity: 0.2;
+}
+
+.containert3 {
+  position: relative;
+  /* top: 50%; */
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  transform-origin: center;
+  animation: spin 4s linear infinite;
+  scale: 0.1;
+  opacity: 0.2;
+}
+
+.containert4 {
+  position: relative;
+  top: -11%;
+  right: 59%;
+  transform: translate(-50%, -70%);
+  width: 200px;
+  height: 200px;
+  transform-origin: center;
+  animation: spin 4s linear infinite;
+  scale: 0.1;
+  opacity: 0.3;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  transform-origin: center bottom;
+}
+
+.triangle-1 {
+  transform: rotate(0deg);
+  border-bottom: 130px solid purple;
+  transform-origin: center bottom;
+  /* animation: rotate1 3s ease infinite; */
+}
+
+.triangle-2 {
+  transform: rotate(60deg);
+  border-bottom: 130px solid purple;
+  transform-origin: center bottom;
+  /* animation: rotate2 3s ease infinite; */
+}
+
+.triangle-3 {
+  transform: rotate(120deg);
+  border-bottom: 130px solid purple;
+  transform-origin: center bottom;
+  /* animation: rotate3 3s ease infinite; */
+}
+
+.triangle-4 {
+  transform: rotate(180deg);
+  border-bottom: 130px solid purple;
+  transform-origin: center bottom;
+  /* animation: rotate4 3s ease infinite; */
+}
+
+.triangle-5 {
+  transform: rotate(240deg);
+  border-bottom: 130px solid purple;
+  transform-origin: center bottom;
+  /* animation: rotate5 3s ease infinite; */
+}
+
+.triangle-6 {
+  transform: rotate(300deg);
+  border-bottom: 130px solid purple;
+  transform-origin: center bottom;
+  /* animation: rotate6 3s ease infinite; */
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate1 {
+  to {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes rotate2 {
+  to {
+    transform: rotate(120deg);
+  }
+}
+
+@keyframes rotate3 {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate4 {
+  to {
+    transform: rotate(240deg);
+  }
+}
+
+@keyframes rotate5 {
+  to {
+    transform: rotate(300deg);
+  }
+}
+
+@keyframes rotate6 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* section7 내부 스타일 */
+
+.kbox_container {
+  background-color: white;
+  width: auto;
+  height: 300px;
+  margin: 10px;
+  border: 10px;
+  border-radius: 10px 10px 10px 10px;
+  padding: 0;
+  z-index: 9999;
+  text-align: left;
+  font-size: 0.2em;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  color: black;
+}
+#kboxa {
+  float: left;
+  position: absolute;
+  margin: 5px;
+  border-radius: 10px;
+}
+#kboxa1 {
+  float: left;
+  position: absolute;
+  top: 60px;
+  margin: 5px;
+  border-radius: 10px;
+}
+#kboxa2 {
+  float: left;
+  position: absolute;
+  top: 120px;
+  margin: 5px;
+  border-radius: 10px;
+}
+#kboxa3 {
+  float: left;
+  position: absolute;
+  top: 180px;
+  margin: 5px;
+  border-radius: 10px;
+}
+#kboxa4 {
+  float: left;
+  position: absolute;
+  top: 240px;
+  margin: 5px;
+  border-radius: 10px;
+}
