@@ -123,11 +123,17 @@
     }
 
     .agree-check-button {
-      border-radius: 10%;
-      width: 70px;
-      height: 30px;
+      border-radius: 5px;
       background-color: rgb(95, 94, 94);
       margin-left: 50px;
+      padding: 8px 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 13px;
+    }
+
+    .agree-check-button:hover {
+      color: white;
     }
   </style>
   <!-- 개인정보 수집 팝업-->
@@ -279,9 +285,8 @@
                       <tr>
                         <td><input type="checkbox" class="agree-check"></td>
                         <td><span class="agree-check-content">&nbsp;&nbsp;&nbsp;개인정보 수집 및 이용 동의</span></td>
-                        <td><button class="agree-check-button">
-                            <a href="javascript:openPop()"
-                              style="text-decoration: none; color:white; font-size: 13px;">전문보기</a></button>
+                        <td>
+                          <a class="agree-check-button" href="javascript:openPop()">전문보기</a>
                         </td>
                       </tr>
                     </table>
