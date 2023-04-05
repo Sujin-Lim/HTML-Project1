@@ -10,7 +10,7 @@ body {
 }
 
 /* 제목,푸터와의 거리 200씩 줌 */
-.section {
+.ys_container {
   height: auto;
   min-height: 100%;
   margin-top: 200px;
@@ -203,9 +203,9 @@ body {
 
 /* 여기까지 고객 서비스 건수 */
 .ys_grow-top {
+  text-align: center;
   font-size: 50px;
-  margin-bottom: 50px;
-  margin-left: 100px;
+  margin-bottom: 100px;
 }
 
 .ys_grow-middle {
@@ -249,6 +249,7 @@ body {
 }
 
 #ys_bar1 {
+  margin-top: 50px;
   top: 70px;
   height: 70px;
   background-color: lightgray;
@@ -256,16 +257,27 @@ body {
 }
 
 #ys_bar2 {
+  margin-top: 50px;
   top: 150px;
   background-color: red;
   height: 70px;
   position: absolute;
 }
 
+#ys_bt1 {
+  font-weight: 200;
+  top: 100px;
+}
+#ys_bt2 {
+  font-weight: 200;
+  top: 180px;
+}
+
 #ys_pie {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  margin-top: 50px;
   display: inline-block;
   position: absolute;
   top: 50px;
@@ -274,6 +286,17 @@ body {
 
 .ys_grow-bottom {
   margin: 200px 200px;
+}
+
+#ys_p1 {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#ys_p2 {
+  margin-top: 100px;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 /* member */

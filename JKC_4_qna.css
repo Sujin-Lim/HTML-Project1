@@ -242,16 +242,16 @@ body {
   font-size: 18px;
   margin-left: 330px;
   display: inline-block;
-  margin-left: 330px;
   margin-bottom: 0;
 }
 
+/* 집 컴퓨터랑 해상도가 달라 .search의 left와 .typing-bar의 margin-left 건드림 */
 .search {
   width: 30px;
   height: 30px;
   position: absolute;
   display: inline-block;
-  left: 955px;
+  left: 540px;
 }
 
 .typing-bar {
@@ -263,6 +263,7 @@ body {
   padding: 1px;
   width: 240px;
   border-radius: 2px;
+  margin-left: 330px;
 }
 
 /* 배경과 겹쳐서 선 길이를 조금 줄임 확인해주세요!!! */
@@ -387,7 +388,7 @@ body {
   width: 30px;
   height: 30px;
   align-items: right;
-  margin-left: 1400px;
+  margin-left: 1000px;
   position: absolute;
   margin-top: -50px;
 }
