@@ -1,6 +1,8 @@
 # HTML-Project1
 HTML/CSS/JavaScript를 사용해 웹페이지 레이아웃 제작 
 
+PPT - [JKC.pdf](https://github.com/Sujin-Lim/HTML-Project1/files/12140780/JKC.pdf)
+
 <br>
 
 ## 제작후기 - 개인
